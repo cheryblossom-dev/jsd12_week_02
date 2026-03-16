@@ -1,6 +1,0 @@
-use('sample_mflix')
-db.theaters.find({"location.address.state":"AL"}).count()
-use('sample_mflix')
-db.theaters.find({"location.address.city":"La Quinta"}).count()
-use('sample_mflix')
-db.theaters.findOne()
