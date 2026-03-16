@@ -1,6 +1,0 @@
-use('sample_mflix')
-db.movies.find({plot:{$regex:"American",$options:"i"}}).count()
-use('sample_mflix')
-db.movies.find({plot:{$regex:"street.$",$options:"s"}}).count()
-use('sample_mflix')
-db.movies.find({plot:{$regex:"street.$",$options:"s"}})
