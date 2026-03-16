@@ -1,0 +1,8 @@
+use('sample_mflix')
+db.movies.find({released:{$gte:ISODate('1950-01-01T00:00:00.000Z')
+    ,$lte:ISODate('1970-01-01T00:00:00.000Z')},countries:{$in:['USA']}})
+db.movies.find({genres:{$all:['Drama','History']},year:{$gte:1970}}).count()
+db.movies.find({cast:'Roy L. McCardell'}).count()
+db.movies.find({directors:'Hal Roach'}).count()
+db.movies.find({directors:'Hal Roach'}).sort({year:1}).limit(1)
+db.movies.find({directors:{$in:['Hal Roach']},'awards.wins':0})
